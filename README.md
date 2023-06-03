@@ -15,7 +15,7 @@ ___
 - [Tiny Combat Arena](https://store.steampowered.com/app/1347550/Tiny_Combat_Arena/) (0.11.1.2T) - You will need to have purchased Tiny Combat Arena to use this addon. Additionally this Addon contains no artwork, code or other data from the game.
 - [Bepinex](https://github.com/BepInEx/BepInEx/releases) (5.4.21) **LTS** - Bepinex loads the the previously mentioned plugin. It is easy to install and can be used to run plugins for anyone. One day TCA might come with Bepinex already installed but for now its just a few clicks to setup..
 ### Optional Software:
-- [TCA-Exporter Addon](https://github.com/DuckMallard/TCA-Exporter) (1.0.0) - With just the plugin you can play with mods created by others. But by using the extractor addon with Blender you can create your own models and mod them into TCA.
+- [TCA-Exporter Addon](https://github.com/DuckMallard/TCA-Exporter) (0.1.0) - With just the plugin you can play with mods created by others. But by using the extractor addon with Blender you can create your own models and mod them into TCA.
 ___
 ### Getting Started: Mod loading
 - If you havent already install Bepinex from [here](https://github.com/BepInEx/BepInEx/releases). You want the x64 version, as TCA is a 64 bit executable.
