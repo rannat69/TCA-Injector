@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net46</TargetFramework>
     <AssemblyName>TCA_Injector</AssemblyName>
-    <Description>Bepinex Plugin to load asset bundles into the game Tiny Combat Arena</Description>
+    <Description>A Bepinex Plugin to load asset bundles into the game Tiny Combat Arena</Description>
     <Version>1.0.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
