@@ -21,7 +21,7 @@ ___
 - If you havent already install Bepinex from [here](https://github.com/BepInEx/BepInEx/releases). You want the x64 version, as TCA is a 64 bit executable.
 - Unzip the contents of the download into the games root directory. In this case it will be somthing like `C:\Program Files (x86)\Steam\steamapps\common\TinyCombatArena`, you can check by making sure it unzips into the same folder that contains `Arena.exe`.
 - Run `Arena.exe` once to setup Bepinex.
-- Download the latest release of this plugin from [here]() into the folder `something\TinyCombatArena\BepInEx\Plugins\`.
+- Download the latest release of this plugin from [here](https://github.com/DuckMallard/TCA-Injector/releases/Latest/TCA_Injector.dll) and place the `.dll` into the folder `something\TinyCombatArena\BepInEx\Plugins\`.
 - Finally create the folder `something\TinyCombatArena\AssetBundles` (paying attention to the spelling and capitilisation). 
 - From now on you can put any assetbundles you want TCA to have access to into the `AssetBundles\` and this plugin will load them every time you run TCA
 ___
