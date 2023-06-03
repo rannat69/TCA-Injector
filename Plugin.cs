@@ -5,10 +5,9 @@ using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
-using Debug = UnityEngine.Debug;
 using HarmonyLib;
 
-namespace TCAMOD;
+namespace TCA_Injector;
 
 [BepInPlugin("injector.tca", "TCA Injector", "0.1.0")]
 [BepInProcess("Arena.exe")]
