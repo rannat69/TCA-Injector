@@ -102,13 +102,23 @@ public class ResourcesInjector : ResourcesAPI
         this.files_changed = false;
     }
 
-    public override Object Load(string path, Type systemTypeInstance)
+    public override Object Load(string raw_path, Type systemTypeInstance)
     {
+        string path = raw_path;
         Object asset;
         if(assets.ContainsKey(path))
         {
+            if(systemTypeInstance == typeof(Object))
+            {
+                asset = assets[path];
+            } else if(systemTypeInstance == typeof(Transform))
+            {
+                path = string.Concat(raw_path, "/Transform");
+                asset = assets[path];
+            } else {
+                asset = null;
+            }
             Plugin.Log.LogInfo(string.Concat("Found from assetbundle asset: ", path));
-            asset = assets[path];
         } else
         {
             asset = base.Load(path, systemTypeInstance);
@@ -117,6 +127,7 @@ public class ResourcesInjector : ResourcesAPI
         {
             Plugin.Log.LogWarning(string.Concat("Null object return from resources at path: ", path));
         }
+
         return asset;
     }
 }
