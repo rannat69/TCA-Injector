@@ -104,12 +104,15 @@ public class ResourcesInjector : ResourcesAPI
 
     public override Object Load(string path, Type systemTypeInstance)
     {
+        Object asset;
         if(assets.ContainsKey(path))
         {
             Plugin.Log.LogInfo(string.Concat("Found from assetbundle asset: ", path));
-            return assets[path];
+            asset = assets[path];
+        } else
+        {
+            asset = base.Load(path, systemTypeInstance);
         }
-        Object asset = base.Load(path, systemTypeInstance);
         if(asset == null)
         {
             Plugin.Log.LogWarning(string.Concat("Null object return from resources at path: ", path));
@@ -117,7 +120,6 @@ public class ResourcesInjector : ResourcesAPI
         return asset;
     }
 }
-
 
 [HarmonyPatch(typeof(CheatCodes), "Awake")]
 class CheatCodeActivationPatch
