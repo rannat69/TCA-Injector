@@ -81,13 +81,24 @@ public class ResourcesInjector : ResourcesAPI
             string[] asset_names = assetbundle.GetAllAssetNames();
             Object[] asset_objects = assetbundle.LoadAllAssets();
 
+Plugin.Log.LogInfo("asset_names ", asset_names);
+Plugin.Log.LogInfo("asset_objects ", asset_objects);
+Plugin.Log.LogInfo("asset_names.Length ", asset_names.Length);
+Plugin.Log.LogInfo("asset_objects.Length ", asset_objects.Length);
+
             if(asset_names.Length != asset_objects.Length)
             {
                 Plugin.Log.LogWarning(string.Concat("Asset names don't correspond to asset objects for assetbundle: ", assetbundle_file));
             }
             else {
+
+Plugin.Log.LogInfo("test1");
+            
                 for(int i = 0;i < asset_names.Length;i ++)
                 {
+
+Plugin.Log.LogInfo("test i ", i);
+                
                     if(this.assets.ContainsKey(asset_names[i]))
                     {
                         Plugin.Log.LogWarning(string.Concat("Duplicate Key: ", asset_names[i]));
@@ -95,6 +106,8 @@ public class ResourcesInjector : ResourcesAPI
                         Plugin.Log.LogInfo(string.Concat("Added asset key: ", asset_names[i], " and object: ", asset_objects[i]));
                         this.assets[asset_names[i]] = asset_objects[i];
                     }
+
+                    Plugin.Log.LogInfo("test2");
                 }
             }
         }
